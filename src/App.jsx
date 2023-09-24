@@ -10,14 +10,14 @@ function App() {
     <>
       <div className='container   pt-10   '>
         <ToastContainer position='top-center' autoClose={2000} />
-        <h2 className='text-center text-2xl'>Unsplash Images</h2>
+        <h2 className='text-center text-[2rem]'>Unsplash Images</h2>
         <div className=' absolute top-4 right-10 '>
           <ThemeToggle />
         </div>
         <InputBox />
-        {/* <div className='w-full flex justify-center'> */}
-        <Gallery />
-        {/* </div> */}
+        <div className='   flex justify-center'>
+          <Gallery />
+        </div>
         <Footer />
       </div>
     </>
