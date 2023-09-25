@@ -3,14 +3,14 @@ const Footer = () => {
     <footer className='footer footer-center p-4   text-base-content'>
       <aside>
         <p>
-          Get code on -{' '}
+          Get code on Github-{' '}
           <a
-            href='http://'
+            href='https://github.com/thejyotipatel/unsplash-images-api-project'
             target='_blank'
             rel='noopener noreferrer'
             className='link link-secondary'
           >
-            github
+            @thejyotipatel
           </a>
         </p>
       </aside>

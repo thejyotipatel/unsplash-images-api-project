@@ -1,9 +1,13 @@
+import { useGlobalContext } from './contaxt'
+
 const InputBox = () => {
+  const { setSearchText } = useGlobalContext()
+
   const hundleSubmit = (e) => {
     e.preventDefault()
     const searchValue = e.target.elements.search.value
     if (!searchValue) return
-    console.log(searchValue)
+    setSearchText(searchValue)
   }
 
   return (
@@ -13,7 +17,7 @@ const InputBox = () => {
     >
       <input
         className='input input-bordered w-full max-w-xs input-secondary'
-        placeholder='dogs'
+        placeholder='cat'
         name='search'
         type='text'
       />

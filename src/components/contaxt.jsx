@@ -1,9 +1,10 @@
-import { createContext, useContext, useState, useEffect } from 'react'
+import { createContext, useContext, useState } from 'react'
 
 const AppContext = createContext()
 
 export const AppProvider = ({ children }) => {
   const [isDarkTheme, setIsDarkTheme] = useState(false)
+  const [searchText, setSearchText] = useState('cat')
 
   const toggleThame = () => {
     const newDarkTheme = !isDarkTheme
@@ -16,7 +17,9 @@ export const AppProvider = ({ children }) => {
   }
 
   return (
-    <AppContext.Provider value={{ toggleThame, isDarkTheme }}>
+    <AppContext.Provider
+      value={{ toggleThame, isDarkTheme, searchText, setSearchText }}
+    >
       {children}
     </AppContext.Provider>
   )
